@@ -25,6 +25,8 @@
       top: 0;
       left: 0;
       width: 100%;
+      background-color: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       z-index: 1000;
       display: flex;
       align-items: center;
@@ -273,11 +275,17 @@
   <p style="text-align: center; margin-bottom: 20px;">
     Have questions or need assistance? Fill out the form below, and we'll get back to you as soon as possible.
   </p>
-  <form action="submit-form.html" method="POST">
+  <form action="https://formsubmit.co/sam.sam.shrestha@gmail.com" method="POST">
+    <!-- Disable CAPTCHA if you don’t want it -->
+    <input type="hidden" name="_captcha" value="false">
+    
+    <!-- Optional: Redirect to a Thank You page after form submission -->
+    <input type="hidden" name="_next" value="thank-you.html">
+
     <input type="text" name="name" placeholder="Your Name" required />
     <input type="email" name="email" placeholder="Your Email" required />
     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
+    <button type="submit" style="background-color: #eee8f2; color: rgb(8, 8, 8);">Send Message</button>
   </form>
 
   <div class="contact-details">
@@ -315,5 +323,54 @@
   });
 </script>
 
+<script>
+  const express = require('express');
+  const app = express();
+  const bodyParser = require('body-parser');
+
+  app.use(bodyParser.urlencoded({ extended: true }));
+  app.use(bodyParser.json());
+
+  app.post('/contact us.html', (req, res) => {
+    const { name, email, message } = req.body;
+
+    // Log the form data (for testing purposes)
+    console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+
+    // Send a response back to the client
+    res.send('<h1>Thank you for contacting us! We will get back to you soon.</h1>');
+  });
+
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      color: #6200a3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Thank You!</h1>
+  <p>Your message has been sent successfully. We will get back to you soon.</p>
 </body>
 </html>
