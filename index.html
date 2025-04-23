@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Drone Guru Pvt Ltd - Elevate Your Future. Learn to Master the Skies with our drone flying courses.">
+  <meta name="description" content="Drone Guru Pvt Ltd - Elevate Your Future. Learn to Master the Skies with our drone flying courses." />
   <title>Drone Guru Pvt Ltd</title>
   
   <style>
@@ -14,17 +14,11 @@
     }
 
     body, html {
-      height: 100%; /* Ensure the body and html take up the full height */
-      margin: 0;
-      padding: 0;
+      height: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #ffffff;
       display: flex;
       flex-direction: column;
-    }
-
-    body {
-      padding-top: 100px; /* Add space below the fixed header */
     }
 
     header {
@@ -33,52 +27,25 @@
       z-index: 1000;
       background-color: rgba(255, 255, 255, 0.95);
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      z-index: 1000;
-      padding: 10px 20px;
     }
 
     .navbar {
       display: flex;
       align-items: center;
-      justify-content: space-between; /* Center the content */
-      padding: 10px 20px;position: fixed;
-      top: 0;
-      left: 0;
+      justify-content: space-between;
+      padding: 10px 20px;
       width: 100%;
       background-color: rgba(255, 255, 255, 0.85);
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
-      .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between; /* Center the content */
-        padding: 10px 20px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.85);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        gap: 20px; /* Add spacing between logo, nav-links, and login button */
-      }
-    
-
-    .logo {
-      margin-right: auto; /* Push the logo to the left */
-    }
-
-    .admin-btn {
-      margin-left: 500px; /* Push the login button to the right */
+      gap: 20px;
     }
 
     .logo {
-      flex: 1; /* Keep the logo on the left */
+      display: flex;
+      align-items: center;
     }
 
     .logo img {
-      height: 100px;
+      height: 60px;
       transition: transform 0.3s ease;
     }
 
@@ -86,22 +53,15 @@
       transform: scale(1.05);
     }
 
-    .nav-toggle {
-      display: none; /* Hidden by default for larger screens */
-      font-size: 30px;
-      cursor: pointer;
-      color: #6200a3;
-    }
-
     .nav-center {
-      flex: 2; /* Center the navigation links */
+      flex: 1;
       display: flex;
       justify-content: center;
     }
 
     .nav-links {
       display: flex;
-      gap: 15px;
+      gap: 20px;
       align-items: center;
     }
 
@@ -109,8 +69,8 @@
       text-decoration: none;
       font-weight: bold;
       color: #333;
-      transition: color 0.3s ease;
       font-size: 1rem;
+      transition: color 0.3s ease;
     }
 
     .nav-links a:hover,
@@ -135,120 +95,24 @@
       background-color: #4b007a;
     }
 
-    @keyframes backgroundZoom {
-      0%, 100% {
-        background-size: 105%; /* Slightly zoomed in */
-      }
-      50% {
-        background-size: 100%; /* Normal size */
-      }
-    }
-
-    .hero {
-      background-image: url('images/background.jpg');
-      background-size: cover; /* Ensure the background covers the entire section */
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed; /* Optional: Makes the background fixed while scrolling */
-      text-align: center;
-      padding: 40px 20px;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-      animation: backgroundZoom 30s ease-in-out infinite; /* Reduced duration to 15s */
-      min-height: 100vh; /* Ensure the hero section takes up the full viewport height */
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-
-    .title {
-      font-size: 3rem;
-      font-weight: 800;
-      color: #2f00ff;
-      margin-top: 20px;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    }
-
-    .tagline {
-      font-size: 1.4rem;
-      font-weight: 500;
-      margin-top: 20px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-      color: #ff6600;
-    }
-
-    .hero-description {
-      color: #0d11f0;
-      text-align: center;
-      font-size: 1.2rem;
-      font-weight: 500;
-      line-height: 1.6;
-      animation: fadeIn 2s ease-in-out;
-      margin-top: 20px;
-      white-space: pre-line;
-    }
-
-    .contact-section {
-      text-align: center;
-      padding: 10px 10px;
-      background-color: #f0f8ff;
-      border-top: 2px solid #2fb380;
-    }
-
-    .contact-btn {
-      display: inline-block;
-      padding: 12px 24px;
-      font-weight: bold;
-      background-color: #ff4500; /* New background color */
-      color: white; /* New text color */
-      border: 2px solid #ff4500; /* Match border color with background */
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-    }
-
-    .contact-btn:hover {
-      background-color: #e03e00; /* Slightly darker color on hover */
-      color: white; /* Keep text color white */
-      transform: scale(1.05); /* Add a hover effect */
-    }
-
-    .contact-btn:active {
-      transform: scale(0.95); /* Add a pressed effect */
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px 10px;
-      background-color: #f2f2f2;
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    @media (min-width: 769px) {
-      .nav-toggle {
-        display: none; /* Hide hamburger button on desktop */
-      }
-
-      .nav-links {
-        display: flex; /* Ensure navigation links are visible */
-      }
+    .nav-toggle {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      color: #6200a3;
     }
 
     @media (max-width: 768px) {
       .nav-toggle {
-        display: block; /* Show hamburger button on smaller screens */
+        display: block;
       }
 
       .nav-links {
-        display: none; /* Hide navigation links by default */
+        display: none;
         flex-direction: column;
         background-color: white;
         position: absolute;
-        top: 60px; /* Adjust based on header height */
+        top: 60px;
         right: 0;
         width: 100%;
         padding: 10px 0;
@@ -256,7 +120,7 @@
       }
 
       .nav-links.show {
-        display: flex; /* Show navigation links when toggled */
+        display: flex;
       }
 
       .nav-links a {
@@ -270,78 +134,18 @@
         width: 90%;
         max-width: 250px;
       }
-
-      .hero {
-        background-size: cover; /* Ensure the background still covers the entire section */
-        animation: backgroundZoom 10s ease-in-out infinite; /* Adjust animation speed for mobile */
-        padding: 20px 15px; /* Adjust padding for better fit on mobile devices */
-      }
-
-      .title {
-        font-size: 2rem; /* Adjust title size for mobile */
-      }
-
-      .tagline {
-        font-size: 1.2rem; /* Adjust tagline size for mobile */
-      }
-
-      .hero-description {
-        font-size: 1rem; /* Adjust description size for mobile */
-        line-height: 1.4; /* Adjust line height for better readability */
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero {
-        animation: backgroundZoom 30s ease-in-out infinite; /* Further speed up animation for very small screens */
-        padding: 15px 5px; /* Further reduce padding for very small screens */
-      }
-
-      .title {
-        font-size: 1.8rem; /* Further adjust title size */
-      }
-
-      .tagline {
-        font-size: 1rem; /* Further adjust tagline size */
-      }
-
-      .hero-description {
-        font-size: 0.9rem; /* Further adjust description size */
-      }
-
-      .contact-btn {
-        width: 100%;
-        max-width: 250px;
-        font-size: 1rem;
-      }
-
-      .hero {
-        padding: 20px 10px;
-      }
-    }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
   </style>
 </head>
 <body>
-
   <header>
     <div class="navbar">
-      <!-- Logo on the left -->
+      <!-- Logo -->
       <div class="logo">
         <img src="images/logo.png" alt="Drone Guru Logo" />
       </div>
 
-      <!-- Navigation links in the center -->
+      <!-- Navigation Links -->
       <div class="nav-center">
         <div class="nav-links" id="navLinks">
           <a href="homepage.html" class="active">Home</a>
@@ -354,7 +158,7 @@
         </div>
       </div>
 
-      <!-- Hamburger button on the right -->
+      <!-- Hamburger Menu -->
       <div class="nav-toggle" onclick="toggleMenu()">☰</div>
     </div>
   </header>
@@ -363,31 +167,22 @@
     <h1 class="title" style="color: #48ee9b;">DRONE GURU PVT LTD</h1>
     <p class="tagline" style="margin-top: -5px; color: #05bdf5; text-shadow: none;">Elevate Your Future. Learn to Master the Skies.</p>
     <p class="hero-description">
-      <span style="color: #fa05d1;text-shadow: none; font-weight: bold; font-size: 1.2rem;">At Drone Guru Pvt. Ltd., we are passionate about drones</span>
-      <span style="color: #fa05d1;text-shadow: none; font-weight: bold; font-size: 1.2rem;">and their power to transform industries.</span>
-      <span style="color: #fa05d1;text-shadow: none; font-weight: bold; font-size: 1.2rem;">Whether you’re a beginner eager to learn or a business looking for drone solutions,</span>
-      <span style="color: #fa05d1; text-shadow: none;font-weight: bold; font-size: 1.2rem;">we are here to guide you every step of the way.</span>
-
-
-
-
-    </span> <span style="color: #00f329; text-shadow: none; font-size: 2.5rem;">Hurry Now, limited seats only-/:</span>
-      <span style="color: #420466;text-shadow: none;">Landline no:-</span> 
-      <span style="color: #420466;text-shadow: none;">Mobile no:</span>
-      <span style="color: #420466;text-shadow: none;">Address: 10, Bijuli Bazar, New Baneshwor, Kathmandu, Nepal</span>
-
-
+      <span style="color: #fa05d1; text-shadow: none; font-weight: bold; font-size: 1.2rem;">At Drone Guru Pvt. Ltd., we are passionate about drones</span>
+      <span style="color: #fa05d1; text-shadow: none; font-weight: bold; font-size: 1.2rem;">and their power to transform industries.</span>
+      <span style="color: #fa05d1; text-shadow: none; font-weight: bold; font-size: 1.2rem;">Whether you’re a beginner eager to learn or a business looking for drone solutions,</span>
+      <span style="color: #fa05d1; text-shadow: none; font-weight: bold; font-size: 1.2rem;">we are here to guide you every step of the way.</span>
+      <br />
+      <span style="color: #00f329; text-shadow: none; font-size: 2.5rem;">Hurry Now, limited seats only-/:</span>
+      <br />
+      <span style="color: #420466; text-shadow: none;">Landline no:-</span>
+      <br />
+      <span style="color: #420466; text-shadow: none;">Mobile no:</span>
+      <br />
+      <span style="color: #420466; text-shadow: none;">Address: 10, Bijuli Bazar, New Baneshwor, Kathmandu, Nepal</span>
+      <br />
       <a href="contact us.html" class="contact-btn">Contact Us</a>
-
-      
     </p>
   </section>
-  
-
-  <!-- Remove the Contact Us button -->
-  <div class="contact-section" style="background-color: #e6f7ff; border-top: 2px solid #007acc;"></div>
-    <!-- Deleted the Contact Us button -->
-  </div>
 
   <footer>
     &copy; <span id="year"></span> Drone Guru Pvt Ltd. All rights reserved.
@@ -407,6 +202,5 @@
       document.getElementById("year").textContent = new Date().getFullYear();
     });
   </script>
-
 </body>
 </html>
